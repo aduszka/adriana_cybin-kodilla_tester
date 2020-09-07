@@ -1,16 +1,14 @@
 public class LeapYear {
     public static void main(String[] args) {
-        int year = 2020;
+        int year = 2024;
 
-        System.out.println(year);
-            if
-            (year % 400 == 0)
-                System.out.println("przestępny");
-            else if
-            (year % 4 == 0 && year % 100 != 0)
-                System.out.println("przestępny");
-
-            else
-            System.out.println("nie przestępny");
+        if (leap(year)) {
+            System.out.println("przestepny");
+        } else {
+            System.out.println("nie przestepny");
+        }
+    }
+    private static boolean leap(int year) {
+        return ((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0);
     }
 }

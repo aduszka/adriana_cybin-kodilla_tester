@@ -16,17 +16,17 @@ public class Grades {
             this.size++;
         }
 
-        public int lastValues() {
-            int last = this.grades[this.size - 1];
-            return last;
-        }
-
         public int sumGrades(int[] grades) {
             int sum = 0;
             for (int i = 0; i < this.grades.length; i++) {
                 sum = sum + this.grades[i];
             }
             return sum;
+        }
+
+        public int lastValues() {
+            int last = this.grades[this.size - 1];
+            return last;
         }
 
         public float averageGrades() {

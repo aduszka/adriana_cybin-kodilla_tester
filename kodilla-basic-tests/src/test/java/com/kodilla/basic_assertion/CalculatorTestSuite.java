@@ -33,7 +33,7 @@ public class CalculatorTestSuite {
         {
             int a = 0;
             int squaredResult = calculator.squared(a);
-            assertEquals(1, squaredResult);
+            assertEquals(0, squaredResult);
         }
         {
             int a = 1;

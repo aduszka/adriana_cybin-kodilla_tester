@@ -15,25 +15,25 @@ public class CashMashine {
     public void add(int value) {
         if (value>0) {
             this.size++;
-            int[] newTab = new int[this.size];
-            System.arraycopy(income, 0, newTab, 0, income.length);
-            newTab[this.size - 1] = value;
-            this.income = newTab;
+            int[] incomeTab = new int[this.size];
+            System.arraycopy(income, 0, incomeTab, 0, income.length);
+            incomeTab[this.size - 1] = value;
+            this.income = incomeTab;
         }
         if (value<0) {
             this.size++;
-            int[] newTab = new int[this.size];
-            System.arraycopy(outcome, 0, newTab, 0, outcome.length);
-            newTab[this.size - 1] = value;
-            this.outcome = newTab;
+            int[] outcomeTab = new int[this.size];
+            System.arraycopy(outcome, 0, outcomeTab, 0, outcome.length);
+            outcomeTab[this.size - 1] = value;
+            this.outcome = outcomeTab;
         }
     }
-    public int[] getIncome() {
-        return income;
+    public int[] getIncome() { return income;
     }
     public int[] getOutcome() {
         return outcome;
     }
+
     public int getSizeIncome() {
         size = income.length;
         if (income.length == 0) {
@@ -65,6 +65,10 @@ public class CashMashine {
             }
             return sum;
         }
+    }
+    public int getSum() {
+        int sum = getSumIncome() + getSumOutcome();
+        return sum;
     }
 }
 

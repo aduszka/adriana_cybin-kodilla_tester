@@ -17,4 +17,11 @@ public class Audi implements Car {
     public double decreaseSpeed() {
         return speed = speed - 10;
     }
+
+    @Override
+    public String toString() {
+        return "Audi{" +
+                "speed=" + speed +
+                '}';
+    }
 }

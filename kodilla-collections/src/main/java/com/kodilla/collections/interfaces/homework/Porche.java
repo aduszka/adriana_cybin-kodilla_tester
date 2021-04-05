@@ -18,4 +18,11 @@ public class Porche implements Car {
     public double decreaseSpeed() {
         return speed = speed -10;
     }
+
+    @Override
+    public String toString() {
+        return "Porche{" +
+                "speed=" + speed +
+                '}';
+    }
 }
